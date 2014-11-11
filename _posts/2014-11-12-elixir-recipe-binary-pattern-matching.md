@@ -7,18 +7,18 @@ categories: elixir otp
 
 Playing around on [exercism.io](http://exercism.io) (highly recommended) I came across some interesting binary pattern matching that isn't in the Elixir lang Getting Started guide:
 
-    {% highlight elixir %}
-    iex(44)> <<var::binary-3, rest::binary>> = "foobar"
-    "foobar"
-    iex(45)> var
-    "foo"
-    iex(46)> rest
-    "bar"
-    {% endhighlight %}
+{% highlight elixir %}
+iex(44)> <<var::binary-3, rest::binary>> = "foobar"
+"foobar"
+iex(45)> var
+"foo"
+iex(46)> rest
+"bar"
+{% endhighlight %}
 
 Apparently, what it's doing is specifying `var` as a three byte binary (and strings are binaries in Elixir). Note that these are bytes, not codepoints:
 
-```Elixir
+{% highlight elixir %}
 iex(55)> <<var::binary-1, rest::binary>> = "öla"          
 "öla"
 iex(56)> var
@@ -32,17 +32,17 @@ iex(59)> var
 "ö"
 iex(60)> rest
 "la"
-```
+{% endhighlight %}
 
 An alternate form of the above is:
-```Elixir
+{% highlight elixir %}
 iex(52)> <<var::bitstring-24, rest::bitstring>> = "foobar"
 "foobar"
 iex(53)> var
 "foo"
 iex(54)> rest
 "bar"
-```
+{% endhighlight %}
 
 
 
