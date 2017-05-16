@@ -7,6 +7,8 @@
 * Logging SHOULD include **what** will happen **next**.
 * Logging SHOULD include **with what** it happened.
 * Logging SHOULD include to **whom** it happened.
+* Logging MAY include in **which context** it happened.
+
 
 Examples:
 
